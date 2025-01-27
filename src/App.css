@@ -1,0 +1,73 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.top-nav {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.top-nav a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+}
+
+.top-nav a:hover {
+  color: #000 !important;
+}
+
+/* Dashboard content */
+.dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .content-grid {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
